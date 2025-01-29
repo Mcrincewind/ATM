@@ -1,0 +1,37 @@
+
+CREATE TABLE Users(
+ userID int primary key identity(1,1),
+userFirstName varchar(50) not null,
+userLastName varchar(50) not null ,
+userMoney decimal(20,2), 
+userRole varchar(15),
+userPassword varchar(60) not null);
+
+
+alter table Users
+add constraint check_money_positive
+check(UserMoney>=0);
+
+
+
+INSERT INTO Users 
+(userFirstName,userLastName,userMoney,userRole,userPassword )
+VALUES ( 'anastasia', 'aslanidou',18000.27,'user','aslanikova');
+
+
+INSERT INTO Users 
+(userFirstName,userLastName,userMoney,userRole,userPassword )
+VALUES ( 'giannhs', 'papadaratsakhs',20000.67,'admin','papadaratsakhseleos');
+
+INSERT INTO Users 
+(userFirstName,userLastName,userMoney,userRole,userPassword )
+VALUES ( 'kwnstantinos', 'kavouras',57000.8,'user','kavourakistogualo');
+
+INSERT INTO Users 
+(userFirstName,userLastName,userMoney,userRole,userPassword )
+VALUES ( 'antwnia', 'giouvanoudh',30000.57,'user','skasmosantwnakh');
+
+
+INSERT INTO Users 
+(userFirstName,userLastName,userMoney,userRole,userPassword )
+VALUES ( 'zeta', 'makrupoulia',300.8,'user','filifili');
